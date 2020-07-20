@@ -2,3 +2,17 @@
 print('Hello World!')
 name=input('What is your name?')
 print('Its good to see you'+name)
+import random
+print(name+', I am thinking of a number between 1 and 24 \n you have to guess it in at most 6 guesses.')
+print('Enter your guess')
+guess=input()
+num=str(random.randint(1,24))
+guesses=1
+while guesses<6:
+    if guess==num:
+        print('Hurrey you guessed my number in'+str(guesses)+'guesses')
+        break
+    print('Enter your guess')
+    guess=input()
+    guesses+=1
+print('Nope, the number I was thinking is '+num)
